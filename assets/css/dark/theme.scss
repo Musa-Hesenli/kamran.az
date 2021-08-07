@@ -1,0 +1,9 @@
+$text-dark : #3A3A3A;
+$light-background : #fff;
+
+.dark {
+    background-color: $text-dark;
+    color: $light-background;
+    .header {
+    }
+}

@@ -1,0 +1,17 @@
+.main-container {
+    display: table;
+    background: #000;
+}
+
+.left-side {
+    display: table-cell;
+    
+}
+
+.right-side {
+    display: table-cell;
+    width: 200px;
+    background-color: red;
+    padding: 15px;
+    width: 200px;
+}

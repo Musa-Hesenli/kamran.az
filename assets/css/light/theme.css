@@ -1,0 +1,11 @@
+:root {
+  --text-dark: #3A3A3A;
+  --light-background: #fff
+;
+}
+
+.light {
+  color: var(--text-dark);
+  background-color: var(--light-background);
+}
+/*# sourceMappingURL=theme.css.map */

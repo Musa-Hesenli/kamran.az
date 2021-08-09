@@ -6,6 +6,14 @@
   margin-right: 0px;
 }
 
+.main-wrapper .main-left-side .left-side-content {
+  padding: 10px;
+}
+
+.main-wrapper .main-left-side .left-features {
+  display: none;
+}
+
 .header {
   padding-left: 20px;
   padding-right: 20px;
@@ -41,6 +49,15 @@
 @media only screen and (min-width: 1200px) {
   .main-left-side {
     margin-right: 350px;
+  }
+  .main-left-side .left-side-content {
+    padding: 10px 100px;
+    margin-left: 100px;
+  }
+  .main-left-side .left-features {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .header {
     padding: 20px 60px;
@@ -78,7 +95,7 @@
   }
 }
 
-.right-menu-contents {
+.main-right-side {
   padding: 15px;
 }
 /*# sourceMappingURL=responsive.css.map */

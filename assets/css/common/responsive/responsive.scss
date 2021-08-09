@@ -1,10 +1,20 @@
 // small screens
 .main-wrapper {
+    .row {
+        margin: 0px;
+    }
     width: 100%;
     .main-left-side {
         margin-right: 0px ;
+        .left-side-content {
+            
+        }
+        .left-features {
+            display: none;
+        }
     }
 }
+
 
 .header {
     padding-left: 20px;
@@ -32,7 +42,7 @@
     position: relative;
 }
 .main-right-side {
-    position: absolute;
+    position: fixed;
     top: 100px;
     right: 0;
     width: 100%;
@@ -52,10 +62,16 @@
     // background-color: black;
     .main-left-side {
         margin-right: 350px;
+        .left-side-content {
+            padding: 10px 100px;
+            margin-left: 100px; 
+        }
+    }
+    .left-features {
+        display: flex !important;
     }
     .header {
         padding: 20px 60px;
-
         .header-left {
             .header-theme-switcher {
                 display: inline-block;
@@ -83,23 +99,21 @@
 
         .main-right-side {
             width: 350px;
-            top: 0px;
-            border-left: 1px solid lightgray;
-            right: 0px;
+            top: 0;
+            border-left: 1px solid $gray-tab-switcher;
+            right: 0;
             position: fixed;
             height: 100%;
 
             .right-menu-contents {
                 width: 290px;
-                // height: 100px;
                 height: 100%;
-                border-right: 1px solid lightgray;
+                border-right: 1px solid $gray-tab-switcher;
             }
         }
     }
 }
 
-.right-menu-contents {
+.main-right-side {
     padding: 15px;
 }
-

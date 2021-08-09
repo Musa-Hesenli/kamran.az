@@ -59,18 +59,21 @@ $(document).ready(function () {
     const closeMenuInSmallScreens = $('.close-menu-small-screens');
 
     closeMenuInSmallScreens.click(function () {
+        
         const display = mainRightSide.css('display');
+        console.log(display);
         // $('.inner').toggle(display === 'none' ? 200 : 0);
         mainRightSide.animate({ width: 'toggle' }, 300);
+        
         if (!mainRightSide.hasClass('show')) {
             mainRightSide.addClass('show');
-
             // change text and icon
             $(closeMenu).html(closeMenuHtml);
-
+            $('body').addClass('hidden');
         } else {
             mainRightSide.removeClass('show');
-            $(closeMenu).html(openMenuHtml)
+            $(closeMenu).html(openMenuHtml);
+            $('body').removeClass('hidden');
         }
     });
 
@@ -82,7 +85,6 @@ $(document).ready(function () {
     const skillMenuLeftSide = $('.skill-left-side');
     let bottomAccordion = 0;
     const skillAccordionMenu = $('.skill-accordion-features');
-
 
     skillsMenuToggler.on('click', function () {
         console.log('click');
@@ -108,6 +110,7 @@ $(document).ready(function () {
         }
         e.stopPropagation();
     })
+
 
     skillMenuLeftSide.click(function () {
         skillMenuContainer.fadeOut(300);

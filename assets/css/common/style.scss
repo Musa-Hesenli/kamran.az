@@ -372,8 +372,6 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
         top: 120px;
         padding-top: 30px;
         left: 0;
-
-        display: flex;
         align-items: center;
         justify-content: space-between;
         flex-direction: column;
@@ -432,11 +430,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
         }
     }
 
-    .left-side-content {
-        padding: 10px 100px;
-        margin-left: 100px;
-        
-    }
+    
 }
 .content-enterance {
     margin-bottom: 20px;
@@ -535,5 +529,24 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 }
 
 // Left side content end
+
+// Right drawer menu begin
+.social-links-small-screens {
+    margin-top: 20px;
+    div {
+        width: 40px;
+        height: 40px;
+        background-color: $gray-tab-switcher;
+        margin-right: 10px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+    }
+}
+// Right drawer menu end
+
+
 
 @import './responsive/responsive';

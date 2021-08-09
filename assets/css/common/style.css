@@ -398,9 +398,6 @@
   top: 120px;
   padding-top: 30px;
   left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -490,11 +487,6 @@
   margin-left: 10px;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-}
-
-.main-left-side .left-side-content {
-  padding: 10px 100px;
-  margin-left: 100px;
 }
 
 .content-enterance {
@@ -617,12 +609,41 @@
   font-weight: 500;
 }
 
+.social-links-small-screens {
+  margin-top: 20px;
+}
+
+.social-links-small-screens div {
+  width: 40px;
+  height: 40px;
+  background-color: #EBEBEB;
+  margin-right: 10px;
+  border-radius: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .main-wrapper {
   width: 100%;
 }
 
+.main-wrapper .row {
+  margin: 0px;
+}
+
 .main-wrapper .main-left-side {
   margin-right: 0px;
+}
+
+.main-wrapper .main-left-side .left-features {
+  display: none;
 }
 
 .header {
@@ -650,7 +671,7 @@
 }
 
 .main-right-side {
-  position: absolute;
+  position: fixed;
   top: 100px;
   right: 0;
   width: 100%;
@@ -660,6 +681,15 @@
 @media only screen and (min-width: 1200px) {
   .main-left-side {
     margin-right: 350px;
+  }
+  .main-left-side .left-side-content {
+    padding: 10px 100px;
+    margin-left: 100px;
+  }
+  .left-features {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
   .header {
     padding: 20px 60px;
@@ -684,20 +714,20 @@
   }
   .main-wrapper .main-right-side {
     width: 350px;
-    top: 0px;
-    border-left: 1px solid lightgray;
-    right: 0px;
+    top: 0;
+    border-left: 1px solid #EBEBEB;
+    right: 0;
     position: fixed;
     height: 100%;
   }
   .main-wrapper .main-right-side .right-menu-contents {
     width: 290px;
     height: 100%;
-    border-right: 1px solid lightgray;
+    border-right: 1px solid #EBEBEB;
   }
 }
 
-.right-menu-contents {
+.main-right-side {
   padding: 15px;
 }
 /*# sourceMappingURL=style.css.map */

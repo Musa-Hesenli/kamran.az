@@ -16,6 +16,7 @@ $(document).ready(function () {
     const closeMenu = $('.close-menu-section');
     const mainRightSide = $('.main-right-side');
     const mainLeftSide = $('.main-left-side');
+    const leftContent = $('.left-content');
 
     // Menu is open, show this html
     const openMenuHtml = `<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,6 +40,7 @@ $(document).ready(function () {
         mainRightSide.fadeToggle(300);
         if (!mainRightSide.hasClass('show')) {
             mainLeftSide.animate({ marginRight: '350px' }, 300);
+            leftContent.animate({ marginRight : '0px' }, 300);
             mainRightSide.addClass('show');
 
             // change text and icon
@@ -46,6 +48,8 @@ $(document).ready(function () {
 
         } else {
             mainLeftSide.animate({ marginRight: '0px' }, 300);
+        
+            leftContent.animate({ marginRight : '350px' }, 300);
             mainRightSide.removeClass('show');
 
             $(closeMenu).html(openMenuHtml)
@@ -81,6 +85,8 @@ $(document).ready(function () {
 
 
     skillsMenuToggler.on('click', function () {
+        console.log('click');
+        $('body').addClass('hidden');
         skillMenuContainer.fadeIn();
         skillsMenu.animate({ width: '300px' }, 300);
         skillsMenu.addClass('open');
@@ -98,6 +104,7 @@ $(document).ready(function () {
             skillMenuContainer.fadeOut(300);
             skillsMenu.animate({ width: '0px' }, 300);
             skillsMenu.removeClass('open');
+            $('body').removeClass('hidden');
         }
         e.stopPropagation();
     })

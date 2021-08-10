@@ -34,18 +34,14 @@ $(document).ready(function () {
 
 
     closeMenu.click(function () {
-        const display = mainRightSide.css('display');
-        // $('.inner').toggle(display === 'none' ? 200 : 0);
-        // mainRightSide.animate({ width: 'toggle' }, 300);
+        
         mainRightSide.fadeToggle(300);
         if (!mainRightSide.hasClass('show')) {
             mainLeftSide.animate({ marginRight: '350px' }, 300);
             leftContent.animate({ marginRight : '0px' }, 300);
             mainRightSide.addClass('show');
-
             // change text and icon
             $(closeMenu).html(closeMenuHtml);
-
         } else {
             mainLeftSide.animate({ marginRight: '0px' }, 300);
         
@@ -59,10 +55,6 @@ $(document).ready(function () {
     const closeMenuInSmallScreens = $('.close-menu-small-screens');
 
     closeMenuInSmallScreens.click(function () {
-        
-        const display = mainRightSide.css('display');
-        console.log(display);
-        // $('.inner').toggle(display === 'none' ? 200 : 0);
         mainRightSide.animate({ width: 'toggle' }, 300);
         
         if (!mainRightSide.hasClass('show')) {
@@ -114,8 +106,9 @@ $(document).ready(function () {
 
     skillMenuLeftSide.click(function () {
         skillMenuContainer.fadeOut(300);
-        skillsMenu.animate({ width: 'toggle' }, 300);
+        skillsMenu.animate({ width: '0px' }, 300);
         skillsMenu.removeClass('open');
+        $('body').removeClass('hidden');
     });
 
 
@@ -123,5 +116,9 @@ $(document).ready(function () {
         skillAccordionMenu.addClass('skills-show');
         skillAccordionMenu.animate({ width: 'toggle' }, 300);
     });
+
+    $(window).resize(function() {
+       
+    })
 
 });

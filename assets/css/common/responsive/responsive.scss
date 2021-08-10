@@ -6,15 +6,19 @@
     width: 100%;
     .main-left-side {
         margin-right: 0px ;
-        .left-side-content {
-            
-        }
         .left-features {
             display: none;
         }
     }
 }
-
+.left-content {
+    margin-right: 0px;
+}
+.right-menu-contents {
+    .header-theme-switcher {
+        background-color: #ebebeb;
+    }
+}
 
 .header {
     padding-left: 20px;
@@ -46,6 +50,7 @@
     top: 100px;
     right: 0;
     width: 100%;
+    background-color: #fff;
     height: calc(100% - 100px);
 }
 
@@ -67,6 +72,7 @@
             margin-left: 100px; 
         }
     }
+
     .left-features {
         display: flex !important;
     }
@@ -101,19 +107,24 @@
             width: 350px;
             top: 0;
             border-left: 1px solid $gray-tab-switcher;
+            background-color: transparent;
             right: 0;
             position: fixed;
             height: 100%;
-
+            direction: ltr;
+            display: block;
             .right-menu-contents {
                 width: 290px;
                 height: 100%;
+                position: absolute;
+                left: 0px;
+                top: 0px;
                 border-right: 1px solid $gray-tab-switcher;
             }
         }
     }
 }
 
-.main-right-side {
+.right-menu-contents {
     padding: 15px;
 }

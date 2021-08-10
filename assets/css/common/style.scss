@@ -381,7 +381,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 // Left side content begin
 .main-left-side {
     .left-features {
-        width: 100px;
+        width: 200px;
         height: calc(100% - 200px);
         position: fixed;
         top: 120px;
@@ -503,6 +503,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
     .custom-card-image {
         width: 100%;
         height: 252px;
+        object-fit: cover;
     }
 
     .card-event-date {
@@ -555,7 +556,118 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
                 }
             }
         }
+
     }
+    .custom-card-footer {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: normal;
+        color: #888888;
+        margin: 20px 0px;
+        .read-more {
+            color: #0075ff;
+        }
+    }
+    .card-bottom-tags {
+        a {
+            color: #000;
+            &:hover {
+                text-decoration: none;
+            }
+            margin-right: 5px;
+        }
+        .active {
+            color: #0075ff;
+            text-decoration: underline;
+        }
+    }
+
+}
+
+.card-full-width {
+    position: relative;
+    .card-img-top {
+        height: 524px;
+        position: relative;
+        background-color: #000;
+        img {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        img.blockquote {
+            width: 48px;
+            height: 48px;
+        }
+        .blockquote {
+            &::before {
+                content: url('../../../images/icons/blockquote.svg');
+                top: 0;
+                left: 0;
+                display: block;
+            }
+        }
+    }
+
+    .custom-card-title {
+        position: absolute;
+        left: 42px;
+        bottom: 42px;
+        color: #fff;
+        h4 {
+
+        font-size: 48px !important;
+        line-height: 56px !important;
+        font-weight: bold;
+        }
+    }
+    .card-entries {
+        display: flex;
+        align-items: center;
+        margin:20px 0px ;
+
+        .card-tag {
+            display: inline-block;
+            padding: 5px;
+            font-weight: 500;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .card-statics {
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+
+            .static-text {
+                margin-left: 10px;
+
+                .dot {
+                    font-weight: bold;
+                }
+
+                .active-static {
+                    font-weight: 500
+                }
+            }
+        }
+
+    }
+
+    .card-event-date {
+        background-color: $gray-tab-switcher;
+        display: inline-block;
+        padding: 7px 12px 5px 12px;
+        margin: 0px 15px 0px 0px;
+        border-radius: 100px;
+        font-weight: 500;
+
+        i {
+            margin-right: 7px
+        }
+    }
+
 }
 
 // Left side content end

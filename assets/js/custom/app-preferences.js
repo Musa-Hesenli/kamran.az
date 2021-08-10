@@ -117,8 +117,6 @@ $(document).ready(function () {
         skillAccordionMenu.animate({ width: 'toggle' }, 300);
     });
 
-    $(window).resize(function() {
-       
-    })
+    
 
 });

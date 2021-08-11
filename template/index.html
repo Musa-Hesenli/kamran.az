@@ -1113,7 +1113,6 @@
         observer: true,
         observeParents: true,
         spaceBetween: 30,
-        slidesPerView :4 ,
         loop : true,
         loopFillGroupWithBlank: true,
         autoplay: {
@@ -1124,6 +1123,23 @@
           el: ".swiper-pagination",
           clickable: true,
         },
+        breakpoints : {
+          0 : {
+            slidesPerView : 1
+          },
+          499 : {
+            slidesPerView : 1
+          },
+          720 : {
+            slidesPerView : 2
+          }, 
+          1000 : {
+            slidesPerView : 3
+          },
+          1200 : {
+            slidesPerView : 4
+          }
+        }
         
       });
     </script>

@@ -54,6 +54,29 @@
     height: calc(100% - 100px);
 }
 
+
+.card-full-width {
+    .card-full-width-bottom-entries {
+        margin-top: 20px;
+        display: block;
+    }
+    .bottom-entries-left-side {
+        display: block;
+    }
+    &.card-with-cutter-image {
+        .card-img-top {
+            position: relative;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .custom-card-title {
+        left: 24px;
+        bottom: 24px;
+    }
+}
+
 //medium screens
 
 @media only screen and (min-width : 768px) {}
@@ -123,6 +146,33 @@
             }
         }
     }
+    .card-full-width {
+        .card-full-width-bottom-entries {
+            margin-top: 0px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .bottom-entries-left-side {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+        &.card-with-cutter-image {
+            .card-img-top {
+                position: relative;
+                img {
+                    width: auto;
+                }
+            }
+        }
+        .custom-card-title {
+            left: 42px;
+            bottom: 42px;
+        }
+    }
+    
 }
 
 .right-menu-contents {

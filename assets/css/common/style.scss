@@ -464,6 +464,8 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 
     .page-item {
         background-color: #fff;
+        color: $dark-button;
+        text-decoration: none;
         border: 1px solid $gray-tab-switcher;
         width: 45px;
         height: 45px;
@@ -473,20 +475,24 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
         border-radius: 50%;
         line-height: 45px;
         transition: .2s;
+        
 
         &.active {
             background-color: $dark-button;
-            color: #fff
+            color: #fff;
+            
         }
 
         &:active {
             background-color: $dark-button;
-            color: #fff
+            color: #fff;
+            
         }
 
         &:hover {
             background-color: $dark-button;
-            color: #fff
+            color: #fff;
+            
         }
 
         &.disabled {
@@ -507,7 +513,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
     }
 
     .card-event-date {
-        background-color: $gray-tab-switcher;
+        background-color: #F2F2F2;
         display: inline-block;
         padding: 7px 12px 5px 12px;
         margin: 20px 0px 10px;
@@ -523,6 +529,13 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
         font-size: 24px;
         color: #000;
         margin-top: 10px;
+        a {
+            color: #000;
+            &:hover {
+                opacity: 1;
+                text-decoration: none;
+            }
+        }
     }
 
     .card-entries {
@@ -537,6 +550,10 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
             font-weight: 500;
             background-color: #000;
             color: #fff;
+            text-decoration: none;
+            &:hover {
+                text-decoration: none;
+            }
         }
 
         .card-statics {
@@ -558,24 +575,29 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
         }
 
     }
+
     .custom-card-footer {
         font-size: 14px;
         line-height: 20px;
         font-weight: normal;
         color: #888888;
         margin: 20px 0px;
+
         .read-more {
             color: #0075ff;
+            text-decoration: none;
+            
         }
     }
+
     .card-bottom-tags {
         a {
             color: #000;
-            &:hover {
-                text-decoration: none;
-            }
+            
+
             margin-right: 5px;
         }
+
         .active {
             color: #0075ff;
             text-decoration: underline;
@@ -585,47 +607,60 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 }
 
 .card-full-width {
-    position: relative;
-    .card-img-top {
-        height: 524px;
-        position: relative;
-        background-color: #000;
-        img {
-            height: 100%;
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-        img.blockquote {
-            width: 48px;
-            height: 48px;
-        }
-        .blockquote {
-            &::before {
-                content: url('../../../images/icons/blockquote.svg');
+    margin-bottom: 20px;
+
+    &.card-with-cutter-image {
+
+        .card-img-top {
+            height: 524px;
+            position: relative;
+            background-color: #000;
+
+            img {
+                height: 100%;
+                width: auto;
+                position: absolute;
                 top: 0;
-                left: 0;
-                display: block;
+                right: 0;
+            }
+
+            img.blockquote {
+                width: 48px;
+                height: 48px;
+            }
+
+            .blockquote {
+                &::before {
+                    content: url('../../../images/icons/blockquote.svg');
+                    top: 0;
+                    left: 0;
+                    display: block;
+                }
             }
         }
-    }
 
-    .custom-card-title {
-        position: absolute;
-        left: 42px;
-        bottom: 42px;
-        color: #fff;
-        h4 {
+        .custom-card-title {
+            position: absolute;
+            color: #fff;
 
-        font-size: 48px !important;
-        line-height: 56px !important;
-        font-weight: bold;
+            h4 {
+
+                font-size: 48px !important;
+                line-height: 56px !important;
+                font-weight: bold;
+                margin-bottom: 0px !important;
+            }
         }
+
+        
+        
+
+        
     }
     .card-entries {
         display: flex;
         align-items: center;
-        margin:20px 0px ;
+        margin: 20px 0px;
 
         .card-tag {
             display: inline-block;
@@ -633,6 +668,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
             font-weight: 500;
             background-color: #000;
             color: #fff;
+            text-decoration: none;
         }
 
         .card-statics {
@@ -656,7 +692,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
     }
 
     .card-event-date {
-        background-color: $gray-tab-switcher;
+        background-color: #F2F2F2;
         display: inline-block;
         padding: 7px 12px 5px 12px;
         margin: 0px 15px 0px 0px;
@@ -668,6 +704,40 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
         }
     }
 
+    &.card-colored-full-background {
+        .card-img-top {
+            height: 524px;
+            color: #fff;
+            position: relative;
+
+            .custom-card-title {
+                position: absolute;
+                font-size: 48px;
+                color: #fff;
+
+                h4 {
+
+                    font-size: 48px !important;
+                    line-height: 56px !important;
+                    font-weight: bold;
+                    margin-bottom: 0px !important;
+                }
+                .blockquote {
+                    &::before {
+                        content: url('../../../images/icons/blockquote.svg');
+                        top: 0;
+                        left: 0;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .card-img-top.gradient {
+        background-image: $app-gradient;
+        background-size: cover;
+        background-position: center;
+    }
 }
 
 // Left side content end

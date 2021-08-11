@@ -85,10 +85,16 @@ $(document).ready(function () {
         skillsMenu.animate({ width: '300px' }, 300);
         skillsMenu.addClass('open');
         bottomAccordion = skillMenuCloserBox.height();
+        console.log(bottomAccordion)
         skillAccordionMenu.css({
-            bottom: bottomAccordion
+            bottom: bottomAccordion,
         });
+        // skillAccordionMenu.children().first().css({
+        //     height : 'calc(100% - '+ bottomAccordion +'px)'
+        // })
     });
+
+
 
     skillMenuCloserBox.click(function (e) {
         if (skillAccordionMenu.hasClass('skills-show')) {

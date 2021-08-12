@@ -23,6 +23,17 @@
     src: url('../../fonts/Gilroy-Medium.ttf');
 }
 
+@font-face {
+    font-family: 'Gilroy bold';
+    src: url('../../fonts/Gilroy-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Gilroy semi bold';
+    src: url('../../fonts/Gilroy-SemiBold.ttf');
+}
+
+
 * {
     font-family: 'Gilroy', sans-serif;
 }
@@ -45,7 +56,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
     z-index: 1;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff;
+    background-color :rgba(255, 255, 255, 0.96);
 
     .header-left {
         display: flex;
@@ -362,36 +373,6 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
         }
     }
 }
-
-// Accordion features tab begin
-.skill-accordion-features {
-    .skills-accordion-wrapper {
-        overflow: auto;
-        height: 100%;
-        .accordion-item {
-            width: 100%;
-            .accordion__header {
-                height: 50px;
-                line-height: 50px;
-                padding-left: 15px;
-                background-color: #F0F0EA;
-                font-weight: 600;
-                text-transform: uppercase;
-                &::before {
-                    content: "#";
-                }
-            }
-            .accordion__body {
-                padding: 15px;
-            }
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(60px);
-            margin-bottom: 1px;
-        }
-    }
-}
-
-// Accordion features tab end
 
 
 // Left side content begin
@@ -735,7 +716,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 
                     font-size: 48px !important;
                     line-height: 56px !important;
-                    font-weight: bold;
+                    font-family: 'Gilroy Medium';
                     margin-bottom: 0px !important;
                 }
                 .blockquote {
@@ -776,6 +757,101 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 }
 
 // Right drawer menu end
+
+// Accordion toggle menu style
+.skill-accordion-features {
+    .skills-accordion-wrapper {
+        overflow: auto;
+        height: 100%;
+        .accordion-item {
+            width: 100%;
+            .accordion__header {
+                height: 70px;
+                line-height: 70px;
+                padding-left: 25px;
+                color: #000;
+                background-color: #F0F0EA;
+                text-transform: uppercase;
+                cursor: pointer;
+                &::before {
+                    content: "#";
+                }
+            }
+            .accordion__header__text {
+                font-family: 'Gilroy medium';
+                font-weight: 500;
+            }
+            .accordion__body {
+                display: none;
+                padding: 40px 0px;
+            }
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(60px);
+            margin-bottom: 1px;
+        }
+    }
+}
+
+.accordion-item .accordion__body {
+    .custom-card {
+        .custom-card-image {
+            height: 186px;
+        }
+        .custom-card-title h4 {
+            font-size: 18px;
+            font-family: 'Gilroy Medium', sans-serif;
+        }
+    }
+    .tab__description {
+        display: flex;
+        align-content: space-between;
+        flex-wrap: wrap;
+        .tab__description__title {
+            color: #000;
+            font-family: 'Gilroy-Bold', sans-serif;
+            font-size: 48px;
+        }
+        .tab__description__skill__ratio {
+            border-radius: 100px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-image: linear-gradient(90.91deg, #EEEDE9 36.36%, rgba(238, 237, 233, 0) 69.78%);;
+            span {
+                font-family: 'Gilroy medium';
+                font-size: 16px;
+                background:  $app-gradient;
+                overflow: hidden;
+                text-decoration: none;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        .tab__description__text__wrapper {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            .paragraph {
+                font-size: 14px;
+                font-family: 'Gilroy medium';
+                font-weight: 400;
+            }
+        }
+        .tab__description__link {
+            .tab__go__to__link {
+                color: #888888;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                span i {
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+// Accordion toggle menu style
 
 .mr-350 {
     margin-right: 350px

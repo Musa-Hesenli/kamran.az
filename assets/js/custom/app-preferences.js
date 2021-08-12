@@ -125,4 +125,27 @@ $(document).ready(function () {
 
     
 
+
+    // Accordion menu showing entries begin
+    const accordion__header = $('.accordion__header');
+    accordion__header.click(function() {
+        const sibling = $(this).siblings().first();
+        console.log(sibling);
+        const all__accordion__body__elements = $('.accordion__body');
+        for (let el of all__accordion__body__elements) {
+            if($(el).hasClass('active__accordion')) {
+                $(el).slideUp();
+            }
+        }
+        if(sibling.hasClass('active__accordion')) {
+            sibling.removeClass('active__accordion');
+            all__accordion__body__elements.slideUp();
+            return;
+        }
+        all__accordion__body__elements.removeClass('active__accordion');
+        sibling.addClass('active__accordion');
+        sibling.slideToggle();
+    });
+    // Accordion menu showing entries end
+
 });

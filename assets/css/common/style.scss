@@ -602,6 +602,18 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
     }
 
 }
+.card-event-date {
+    background-color: #F2F2F2;
+    display: inline-block;
+    padding: 7px 12px 5px 12px;
+    margin: 0px 15px 0px 0px;
+    border-radius: 100px;
+    font-weight: 500;
+
+    i {
+        margin-right: 7px
+    }
+}
 
 .card-full-width {
     margin-bottom: 20px;
@@ -688,18 +700,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 
     }
 
-    .card-event-date {
-        background-color: #F2F2F2;
-        display: inline-block;
-        padding: 7px 12px 5px 12px;
-        margin: 0px 15px 0px 0px;
-        border-radius: 100px;
-        font-weight: 500;
-
-        i {
-            margin-right: 7px
-        }
-    }
+    
 
     &.card-colored-full-background {
         .card-img-top {
@@ -856,5 +857,9 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 .mr-350 {
     margin-right: 350px
 }
-
+// Responsive css
 @import './responsive/responsive';
+
+
+// Single news item css
+@import './pages/single_news';

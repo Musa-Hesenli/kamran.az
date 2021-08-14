@@ -130,7 +130,6 @@ $(document).ready(function () {
     const accordion__header = $('.accordion__header');
     accordion__header.click(function() {
         const sibling = $(this).siblings().first();
-        console.log(sibling);
         const all__accordion__body__elements = $('.accordion__body');
         for (let el of all__accordion__body__elements) {
             if($(el).hasClass('active__accordion')) {
@@ -147,5 +146,29 @@ $(document).ready(function () {
         sibling.slideToggle();
     });
     // Accordion menu showing entries end
+
+
+
+    // About me accordions begin
+    const work__accordion__header = $('.work__accordion__header');
+    const work__accordion__bodies = $('.work__accordion__body');
+    work__accordion__header.click(function() {
+
+        const sibling = $(this).siblings().first();
+        if(sibling.hasClass('active__accordion')) {
+            sibling.removeClass('active__accordion');
+            $(this).find('h2').removeClass('gradient-text');
+            work__accordion__bodies.slideUp();
+            return;
+        }
+        work__accordion__header.find('h2').removeClass('gradient-text');
+        work__accordion__bodies.removeClass('active__accordion');
+        work__accordion__bodies.slideUp();
+        sibling.addClass('active__accordion');
+
+        $(this).find('h2').addClass('gradient-text');
+        sibling.slideToggle()
+    }) 
+    // About me accordions end
 
 });

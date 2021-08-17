@@ -1269,8 +1269,7 @@ h4 {
     }
     .list-group, .list-group-item {
         border: none;
-        padding-left: 0px;
-        
+        padding-left: 0px; 
     }
 
 }
@@ -1286,4 +1285,35 @@ h4 {
     background-color: #F2F2F2;
     color: #000;
 
+}
+
+
+
+.hoverable__content {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: calc(100% - 350px);
+    z-index: 4000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+
+.category__content {
+    display: none;
+}
+
+.hoverable__dynamic__content {
+    display: flex;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }

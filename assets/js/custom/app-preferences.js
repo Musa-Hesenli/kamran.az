@@ -1,4 +1,10 @@
+
 $(document).ready(function () {
+
+
+
+
+
     const appWrapper = $('.main-wrapper');
     // console.log(switcherButton)
 
@@ -171,4 +177,42 @@ $(document).ready(function () {
     }) 
     // About me accordions end
 
+
+    // Left side hover able content
+
+    const category__tab = $('.category-tab');
+    const hover__able__content = $('.hoverable__content');
+
+    // category__tab.on('mouseover', function() {
+    //     const display = hover__able__content.css('display');
+    //     if(display !== 'block') hover__able__content.fadeIn(300);
+    // }); 
+
+    // category__tab.on('mouseout', function(e) {
+    //     const display = hover__able__content.css('display');
+    //     // if(display === 'none') {
+    //         hover__able__content.fadeOut(300)
+    //     // }
+    // });
+
+    category__tab.hover(function() {
+        
+        const display = hover__able__content.css('display');
+        category__tab.removeClass('active');
+        $(this).addClass('active');
+        hover__able__content.css({
+            transform : 'translate(100, 100)'
+        });
+        const content = $(this).find('.category__content').html();
+        hover__able__content.find('.hoverable__dynamic__content').html(content);
+        
+        if(display !== 'block') hover__able__content.fadeIn(300);
+    });
+    
+    $('.category-tabs').hover(() => {}, function() {
+        hover__able__content.fadeOut(300);
+    })
+    
+    // Left side hover able content
+    
 });

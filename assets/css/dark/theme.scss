@@ -1,9 +1,22 @@
-$text-dark : #3A3A3A;
+$text-dark : #212121;
 $light-background : #fff;
 
 .dark {
     background-color: $text-dark;
     color: $light-background;
     .header {
+        background-color :#212121;
+        color: $light-background;
+        .header-right {
+            .close-menu-section {
+                color: #fff;
+            }
+        }
+    }
+    a {
+        color: $light-background;
+    }
+    .card-event-date {
+        background-color: #000;
     }
 }

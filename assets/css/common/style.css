@@ -41,6 +41,25 @@
   font-size: 14px;
 }
 
+.theme-wrapper {
+  margin: 2px;
+  padding: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100px;
+}
+
+.theme-wrapper.active {
+  background-image: linear-gradient(241.93deg, #FFE380 9.25%, rgba(255, 197, 0, 0) 51.39%), linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
+}
+
 .header {
   width: 100%;
   padding: 20px 60px;
@@ -54,7 +73,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.96);
 }
 
 .header .header-left {
@@ -73,7 +91,6 @@
 }
 
 .header .header-left .header-theme-switcher {
-  padding: 4px;
   border-radius: 100px;
   background-color: #EBEBEB;
   margin-left: 30px;
@@ -87,16 +104,12 @@
   font-weight: 500;
   -webkit-transition: .4s;
   transition: .4s;
+  font-family: 'Gilroy medium';
 }
 
 .header .header-left .header-theme-switcher button.dark-mode-button {
   background-color: #2D2C2A;
   color: #fff;
-  margin-left: 4px;
-}
-
-.header .header-left .header-theme-switcher button.dark-mode-button:hover {
-  background-color: coral;
 }
 
 .header .header-left .header-theme-switcher button.light-mode-button {
@@ -131,7 +144,6 @@
 }
 
 .header .header-right .close-menu-section {
-  color: #000;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -239,7 +251,6 @@
   padding: 0px !important;
   text-transform: none !important;
   background-color: transparent !important;
-  color: #fff;
 }
 
 .skill-container .skill-menu-closer .skill-closer-desc {
@@ -336,7 +347,6 @@
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: red !important;
 }
 
 .skill-accordion-features {
@@ -598,12 +608,7 @@
 
 .custom-card .custom-card-title {
   font-size: 24px;
-  color: #000;
   margin-top: 10px;
-}
-
-.custom-card .custom-card-title a {
-  color: #000;
 }
 
 .custom-card .custom-card-title a:hover {

@@ -1,5 +1,5 @@
 :root {
-  --text-dark: #3A3A3A;
+  --text-dark: #000;
   --light-background: #fff
 ;
 }
@@ -7,5 +7,14 @@
 .light {
   color: var(--text-dark);
   background-color: var(--light-background);
+}
+
+.light .header {
+  background-color: rgba(255, 255, 255, 0.96);
+  color: var(--text-dark);
+}
+
+.light a {
+  color: var(--text-dark);
 }
 /*# sourceMappingURL=theme.css.map */

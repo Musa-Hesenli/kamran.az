@@ -1,9 +1,16 @@
+const theme = getCookie('theme');
+if(theme === 'dark') {
+    $('.main-wrapper').removeClass('light');
+    $('.main-wrapper').addClass('dark');
+    $('.dark-mode-button').parent().addClass('active');
+    $('.light-mode-button').parent().removeClass('active');
+}
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     $('.preloader__wrapper').css({
-        display : 'none'
-    })
-})
+        display: 'none'
+    });
+});
 $(document).ready(function () {
     const appWrapper = $('.main-wrapper');
     // console.log(switcherButton)
@@ -30,18 +37,18 @@ $(document).ready(function () {
 
 
     closeMenu.click(function () {
-        
+
         mainRightSide.fadeToggle(300);
         if (!mainRightSide.hasClass('show')) {
             mainLeftSide.animate({ marginRight: '350px' }, 300);
-            leftContent.animate({ marginRight : '0px' }, 300);
+            leftContent.animate({ marginRight: '0px' }, 300);
             mainRightSide.addClass('show');
             // change text and icon
             $(closeMenu).html(closeMenuHtml);
         } else {
             mainLeftSide.animate({ marginRight: '0px' }, 300);
-        
-            leftContent.animate({ marginRight : '350px' }, 300);
+
+            leftContent.animate({ marginRight: '350px' }, 300);
             mainRightSide.removeClass('show');
 
             $(closeMenu).html(openMenuHtml)
@@ -52,7 +59,7 @@ $(document).ready(function () {
 
     closeMenuInSmallScreens.click(function () {
         mainRightSide.animate({ width: 'toggle' }, 300);
-        
+
         if (!mainRightSide.hasClass('show')) {
             mainRightSide.addClass('show');
             // change text and icon
@@ -119,20 +126,20 @@ $(document).ready(function () {
         skillAccordionMenu.animate({ width: 'toggle' }, 300);
     });
 
-    
+
 
 
     // Accordion menu showing entries begin
     const accordion__header = $('.accordion__header');
-    accordion__header.click(function() {
+    accordion__header.click(function () {
         const sibling = $(this).siblings().first();
         const all__accordion__body__elements = $('.accordion__body');
         for (let el of all__accordion__body__elements) {
-            if($(el).hasClass('active__accordion')) {
+            if ($(el).hasClass('active__accordion')) {
                 $(el).slideUp();
             }
         }
-        if(sibling.hasClass('active__accordion')) {
+        if (sibling.hasClass('active__accordion')) {
             sibling.removeClass('active__accordion');
             all__accordion__body__elements.slideUp();
             return;
@@ -148,10 +155,10 @@ $(document).ready(function () {
     // About me accordions begin
     const work__accordion__header = $('.work__accordion__header');
     const work__accordion__bodies = $('.work__accordion__body');
-    work__accordion__header.click(function() {
+    work__accordion__header.click(function () {
 
         const sibling = $(this).siblings().first();
-        if(sibling.hasClass('active__accordion')) {
+        if (sibling.hasClass('active__accordion')) {
             sibling.removeClass('active__accordion');
             $(this).find('h2').removeClass('gradient-text');
             work__accordion__bodies.slideUp();
@@ -164,7 +171,7 @@ $(document).ready(function () {
 
         $(this).find('h2').addClass('gradient-text');
         sibling.slideToggle()
-    }) 
+    })
     // About me accordions end
 
 
@@ -185,43 +192,103 @@ $(document).ready(function () {
     //     // }
     // });
 
-    category__tab.hover(function() {
-        
+    category__tab.hover(function () {
+
         const display = hover__able__content.css('display');
         category__tab.removeClass('active');
         $(this).addClass('active');
-        hover__able__content.css({
-            transform : 'translate(100, 100)'
-        });
-        const content = $(this).find('.category__content').html();
-        hover__able__content.find('.hoverable__dynamic__content').html(content);
         
-        if(display !== 'block') hover__able__content.fadeIn(300);
+        const content = $(this).find('.category__content').html();
+        console.log(content);
+        hover__able__content.find('.hoverable__dynamic__content').html(content);
+
+        if (display !== 'block') hover__able__content.fadeIn(300);
     });
-    
-    $('.category-tabs').hover(() => {}, function() {
+
+    $('.category-tabs').hover(() => { }, function () {
         hover__able__content.fadeOut(300);
     })
-    
+
     // Left side hover able content
 
 
     // Theme switcher
     const darkThemeButton = $('.dark-mode-button');
     const lightThemeButton = $('.light-mode-button');
-    darkThemeButton.on('click', function() {
-        if(!appWrapper.hasClass('dark')) {
+    const preloader__wrapper = $('.preloader__wrapper');
+    darkThemeButton.on('click', function () {
+        if (!appWrapper.hasClass('dark')) {
             // Switch theme to dark
-            appWrapper.removeClass('light');
-            appWrapper.addClass('dark');
+            lightThemeButton.parent().removeClass('active');
+            darkThemeButton.parent().addClass('active');
+
+            preloader__wrapper.fadeIn()
+
+            changeSVGColors("#fff");
+
+            setTimeout(() => {
+                preloader__wrapper.fadeOut()
+                appWrapper.removeClass('light');
+                appWrapper.addClass('dark');
+            }, 1500);
+
+            setCookie('theme', 'dark', 100);
         }
     });
-    lightThemeButton.on('click', function() {
-        if(!appWrapper.hasClass('light')) {
+    lightThemeButton.on('click', function () {
+        if (!appWrapper.hasClass('light')) {
             // Switch theme to light
-            appWrapper.removeClass('dark');
-            appWrapper.addClass('light');
+            darkThemeButton.parent().removeClass('active');
+            lightThemeButton.parent().addClass('active');
+
+            changeSVGColors('#000')
+
+            preloader__wrapper.fadeIn()
+
+            setTimeout(() => {
+                preloader__wrapper.fadeOut();
+                appWrapper.removeClass('dark');
+                appWrapper.addClass('light');
+            }, 1500);
+
+            setCookie('theme', 'light',100)
         }
     });
-    
+
+
+    $(window).resize(function() {
+        if($(this).width() > 1200 && !mainRightSide.hasClass('show')) {
+            closeMenu.click()
+        }
+        document.querySelector('.main-left-side').style = ''
+        document.querySelector('.left-content').style = '';
+    });
+
 });
+
+function changeSVGColors(color) {
+    $('svg').attr('fill', color);
+}
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}

@@ -1,23 +1,13 @@
 
+window.addEventListener('load', function() {
+    $('.preloader__wrapper').css({
+        display : 'none'
+    })
+})
 $(document).ready(function () {
-
-
-
-
-
     const appWrapper = $('.main-wrapper');
     // console.log(switcherButton)
 
-    $('#switcher-tab').on('click', function () {
-        console.log('Change theme')
-        if (appWrapper.hasClass('dark')) {
-            appWrapper.addClass('light');
-            appWrapper.removeClass('dark');
-        } else {
-            appWrapper.addClass('dark');
-            appWrapper.removeClass('light');
-        }
-    });
 
     const closeMenu = $('.close-menu-section');
     const mainRightSide = $('.main-right-side');
@@ -214,5 +204,24 @@ $(document).ready(function () {
     })
     
     // Left side hover able content
+
+
+    // Theme switcher
+    const darkThemeButton = $('.dark-mode-button');
+    const lightThemeButton = $('.light-mode-button');
+    darkThemeButton.on('click', function() {
+        if(!appWrapper.hasClass('dark')) {
+            // Switch theme to dark
+            appWrapper.removeClass('light');
+            appWrapper.addClass('dark');
+        }
+    });
+    lightThemeButton.on('click', function() {
+        if(!appWrapper.hasClass('light')) {
+            // Switch theme to light
+            appWrapper.removeClass('dark');
+            appWrapper.addClass('light');
+        }
+    });
     
 });

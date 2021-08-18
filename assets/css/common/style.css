@@ -1662,4 +1662,23 @@ h4 {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+.preloader__wrapper {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0px;
+  z-index: 10000;
+  left: 0px;
+}
 /*# sourceMappingURL=style.css.map */

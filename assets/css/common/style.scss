@@ -94,6 +94,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
                 padding: 4px 12px;
                 font-weight: 500;
                 transition: .4s;
+                cursor: pointer;
                 font-family: 'Gilroy medium';
                 
                 
@@ -157,8 +158,6 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
     position: fixed;
     bottom: 0;
     right: 0;
-    width: 60px;
-    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -336,9 +335,36 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
     -webkit-text-fill-color: transparent;
 }
 
+
+.bottom-menu-opener {
+    width: 55px;
+    height: 55px;
+}
 .main-right-side {
+    &::-webkit-scrollbar {
+        width: 5px;
+        border-radius: 50px;
+    }
+     
+      
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+        border-radius: 50px;
+      }
+       
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #dad9d9; 
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
     .filters {
 
+        direction: ltr;
         h4 {
             font-size: 21px;
             font-weight: 600;
@@ -381,7 +407,9 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 
         .category-tabs {
             .category-tab {
-                padding: 10px 0px;
+                cursor: pointer;
+                user-select: none;
+                padding: 8px 0px;
 
                 h6 {
                     font-weight: 500

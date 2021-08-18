@@ -11,6 +11,7 @@ window.addEventListener('load', function () {
         display: 'none'
     });
 });
+
 $(document).ready(function () {
     const appWrapper = $('.main-wrapper');
     // console.log(switcherButton)
@@ -46,12 +47,11 @@ $(document).ready(function () {
             // change text and icon
             $(closeMenu).html(closeMenuHtml);
         } else {
-            mainLeftSide.animate({ marginRight: '0px' }, 300);
 
+            mainLeftSide.animate({ marginRight: '0px' }, 300);
             leftContent.animate({ marginRight: '350px' }, 300);
             mainRightSide.removeClass('show');
-
-            $(closeMenu).html(openMenuHtml)
+            $(closeMenu).html(openMenuHtml);
         }
     });
 
@@ -258,11 +258,15 @@ $(document).ready(function () {
 
     $(window).resize(function() {
         if($(this).width() > 1200 && !mainRightSide.hasClass('show')) {
-            closeMenu.click()
+            closeMenu.click();
         }
         document.querySelector('.main-left-side').style = ''
         document.querySelector('.left-content').style = '';
     });
+
+    $('.scroll-down').click(function() {
+        $("html, body").animate({ scrollTop: document.body.scrollHeight }, 300);
+    })
 
 });
 

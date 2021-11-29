@@ -42,14 +42,16 @@ $(document).ready(function () {
         mainRightSide.fadeToggle(300);
         if (!mainRightSide.hasClass('show')) {
             mainLeftSide.animate({ marginRight: '350px' }, 300);
-            leftContent.animate({ marginRight: '0px' }, 300);
-            mainRightSide.addClass('show');
+            leftContent.animate({ marginRight: 'auto' }, 300);
+            leftContent.animate({ marginLeft : "auto" }, 300);
+                        mainRightSide.addClass('show');
             // change text and icon
             $(closeMenu).html(closeMenuHtml);
         } else {
 
             mainLeftSide.animate({ marginRight: '0px' }, 300);
-            leftContent.animate({ marginRight: '350px' }, 300);
+            leftContent.animate({ marginRight: 'auto' }, 300);
+            leftContent.animate({ marginLeft : 'auto' }, 300);
             mainRightSide.removeClass('show');
             $(closeMenu).html(openMenuHtml);
         }
@@ -266,7 +268,17 @@ $(document).ready(function () {
 
     $('.scroll-down').click(function() {
         $("html, body").animate({ scrollTop: document.body.scrollHeight }, 300);
+    });
+
+
+
+    // BEGIN: Filter menu 
+    const menuLink = $(".filter-item .filter-link");
+    menuLink.on('click', function() {
+        const refer = $(this).parent().find('.filter-hidden');
+        refer.slideToggle();
     })
+    // END: Filter menu
 
 });
 

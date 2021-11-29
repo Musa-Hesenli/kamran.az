@@ -1,36 +1,28 @@
 @font-face {
     font-family: 'Gilroy';
     src: url("../../fonts/Gilroy-Regular.ttf");
+    font-weight: 400;
 }
 
-@font-face {
-    font-family: 'Gilroy Thin';
-    src: url("../../fonts/Gilroy-Thin.ttf");
-}
+
+
 
 @font-face {
-    font-family: 'Gilroy ultra light';
-    src: url('../../fonts/Gilroy-UltraLight.ttf');
-}
-
-@font-face {
-    font-family: 'Gilroy light';
-    src: url('../../fonts/Gilroy-Light.ttf');
-}
-
-@font-face {
-    font-family: 'Gilroy medium';
+    font-family: 'Gilroy';
     src: url('../../fonts/Gilroy-Medium.ttf');
+    font-weight: 600;
 }
 
 @font-face {
-    font-family: 'Gilroy bold';
+    font-family: 'Gilroy';
+    src: url('../../fonts/Gilroy-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Gilroy';
     src: url('../../fonts/Gilroy-Bold.ttf');
-}
-
-@font-face {
-    font-family: 'Gilroy semi bold';
-    src: url('../../fonts/Gilroy-SemiBold.ttf');
+    font-weight: 700;
 }
 
 
@@ -92,10 +84,9 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
                 border: none;
                 border-radius: 100px;
                 padding: 4px 12px;
-                font-weight: 500;
+                font-weight: 600;
                 transition: .4s;
                 cursor: pointer;
-                font-family: 'Gilroy medium';
                 
                 
                 &.dark-mode-button {
@@ -175,6 +166,10 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 
 .main-left-side {
     min-height: 100px;
+}
+
+.left-side-content {
+    padding-bottom: 176px !;
 }
 
 .main-right-side {
@@ -372,11 +367,24 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
         }
 
         .filter-item {
-            display: flex;
             align-items: center;
             margin: 10px 0px;
             white-space: nowrap;
+            a {
+                text-decoration: none;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 20px;
+                /* identical to box height, or 143% */
 
+                display: flex;
+                align-items: center;
+
+                /* Text/Primary */
+
+                color: #3A3A3A;
+            }
             div.icon-wrapper {
                 margin-right: 15px;
                 background-color: $gray-tab-switcher;
@@ -395,6 +403,34 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 
             div.filter-text {
                 font-weight: 500
+            }
+
+            .filter-hidden {
+                padding: 16px 0px 20px 63px;
+                display: none;
+                .filter-hidden__item {
+                    // display: inline-block;
+                    font-style: normal;
+                    font-weight: normal;
+                    display: table;
+                    padding: 4px 14px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    line-height: 20px;
+                    /* identical to box height, or 143% */
+                    margin-bottom: 10px;
+                    align-items: center;
+                    letter-spacing: 0.02em;
+                    border-radius: 100px;
+                    /* Text/Black */
+
+                    color: #000000;
+                    border: 1px solid #F0F0EA;
+                    &:hover, &:active, &.active {
+                        background: #2D2C2A;
+                        color: #fff;
+                    }
+                }
             }
         }
     }
@@ -491,7 +527,12 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 }
 
 .content-enterance {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 48px;
+}
+
+.start-pagination {
+    margin-bottom: 64px;
 }
 
 .description-text {
@@ -503,7 +544,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
     display: flex;
     align-items: center;
     padding: 10px 0px;
-
+    flex-wrap: wrap;
     .page-item {
         background-color: #fff;
         color: $dark-button;
@@ -511,7 +552,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
         border: 1px solid $gray-tab-switcher;
         width: 45px;
         height: 45px;
-        margin: 0px 3px;
+        margin: 5px 3px;
         text-align: center;
         cursor: pointer;
         border-radius: 50%;
@@ -556,19 +597,36 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 
     .card-event-date {
         background-color: #F2F2F2;
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
         padding: 7px 12px 5px 12px;
         margin: 20px 0px 10px;
         border-radius: 100px;
         font-weight: 500;
 
-        i {
+
+        svg {
             margin-right: 7px
+        }
+
+        .date-text {
+            margin-bottom: -3px;
         }
     }
 
     .custom-card-title {
         font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+
+        /* or 133% */
+        display: flex;
+        align-items: center;
+
+        /* Text/Black */
+        color: #000000;
         margin-top: 10px;
         a {
             &:hover {
@@ -647,14 +705,20 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 }
 .card-event-date {
     background-color: #F2F2F2;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     padding: 7px 12px 5px 12px;
     margin: 0px 15px 0px 0px;
     border-radius: 100px;
     font-weight: 500;
 
-    i {
+
+    svg {
         margin-right: 7px
+    }
+
+    .date-text {
+        margin-bottom: -3px;
     }
 }
 
@@ -699,7 +763,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 
                 font-size: 48px !important;
                 line-height: 56px !important;
-                font-weight: bold;
+                font-weight: 700;
                 margin-bottom: 0px !important;
             }
         }
@@ -760,7 +824,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 
                     font-size: 48px !important;
                     line-height: 56px !important;
-                    font-family: 'Gilroy Medium';
+                    font-weight: 700;
                     margin-bottom: 0px !important;
                 }
                 .blockquote {
@@ -822,7 +886,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
                 }
             }
             .accordion__header__text {
-                font-family: 'Gilroy medium';
+                font-family: 'Gilroy';
                 font-weight: 500;
             }
             .accordion__body {
@@ -843,7 +907,8 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
         }
         .custom-card-title h4 {
             font-size: 18px;
-            font-family: 'Gilroy Medium', sans-serif;
+            font-family: 'Gilroy', sans-serif;
+            font-weight: 500;
         }
     }
     .tab__description {
@@ -852,7 +917,8 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
         flex-wrap: wrap;
         .tab__description__title {
             color: #000;
-            font-family: 'Gilroy-Bold', sans-serif;
+            font-family: 'Gilroy', sans-serif;
+            font-weight: 700;
             font-size: 48px;
         }
         .tab__description__skill__ratio {
@@ -862,8 +928,9 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
             margin-bottom: 20px;
             background-image: linear-gradient(90.91deg, #EEEDE9 36.36%, rgba(238, 237, 233, 0) 69.78%);;
             span {
-                font-family: 'Gilroy medium';
+                font-family: 'Gilroy';
                 font-size: 16px;
+                font-weight: 500;
                 background:  $app-gradient;
                 overflow: hidden;
                 text-decoration: none;
@@ -878,7 +945,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
             margin-bottom: 20px;
             .paragraph {
                 font-size: 14px;
-                font-family: 'Gilroy medium';
+                font-family: 'Gilroy';
                 font-weight: 400;
             }
         }
@@ -913,8 +980,9 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
     .single__news__title {
         margin: 15px 0px;
         h4 {
-            font-family: 'Gilroy medium';
+            font-family: 'Gilroy';
             font-size: 24px;
+            font-weight: 500;
         }
     }
 
@@ -939,8 +1007,9 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
     .single__news__content__intro {
         .single__news__content__paragraph {
             font-size: 16px;
-            font-family: 'Gilroy medium';
+            font-family: 'Gilroy';
             line-height: 24px;
+            font-weight: 500;
         }
     }
     .single__news__content__gallery {
@@ -956,8 +1025,8 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 .gallery__item__title {
     margin: 10px 0px;
     font-size: 16px;
-    font-family: 'Gilroy bold';
-    font-weight: 400;
+    font-family: 'Gilroy';
+    font-weight: 600;
 }
 
 .content__entries__tags {
@@ -965,8 +1034,9 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
         background-color: #000;
         padding: 6px;
         margin-right: 6px;
-        font-family: 'Gilroy medium';
+        font-family: 'Gilroy';
         color: #fff;
+        font-weight: 500;
         text-decoration: none;
     }
 }
@@ -1021,7 +1091,8 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
         margin: 0px;
         padding: 0px;
         font-size: 16px;
-        font-family: "Gilroy medium";
+        font-family: "Gilroy";
+        font-weight: 500;
     }
 }
 
@@ -1029,9 +1100,6 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 
 // Single news page css end
 
-h4 {
-    font-family: 'Gilroy medium';
-}
 
 // About page
 .about__header {
@@ -1063,17 +1131,19 @@ h4 {
         padding-left: 0px;
 
         font-size: 15px;
-        font-family: 'Gilroy medium';
+        font-family: 'Gilroy';
+        font-weight: 500;
         span {
             font-size: 15px;
-            font-family: 'Gilroy medium';
+            font-family: 'Gilroy';
+            font-weight: 500;
         }
         a {
             color: #000;
             text-decoration: none;
             margin-left: 10px;
             margin-right: 10px;
-            font-family: 'Gilroy Medium';
+            font-weight: 500;
         }
     }
 }
@@ -1100,7 +1170,7 @@ h4 {
     align-items: center;
     justify-content: space-between;
     h2 {
-        font-family: 'Gilroy bold';
+        font-weight: 700;
         margin: 0px;
         font-size: 30px;
         color: #3A3A3A;
@@ -1117,7 +1187,7 @@ h4 {
 
 .medium-text {
     font-size: 16px;
-    font-family: 'Gilroy medium';
+    font-weight: 500;
     line-height: 24px;
 }
 .segment {
@@ -1135,7 +1205,7 @@ h4 {
 }
 
 .semi-bold-text {
-    font-family: 'Gilroy semi bold';
+    font-weight: 600;
 }
 
 .segment__footer {
@@ -1274,7 +1344,7 @@ h4 {
         white-space: nowrap;
         padding: 5px 20px;
         border-radius: 100px;
-        font-family: 'Gilroy medium';
+        font-weight: 500;
         cursor: pointer;
         margin-right: 6px;
         &.active {
@@ -1363,4 +1433,28 @@ h4 {
     top: 0px;
     z-index: 10000;
     left: 0px;
+}
+
+.left-content {
+    max-width: 960px;
+}
+
+@media only screen and (max-width : 1200px) {
+    .main-right-side {
+        display: none;
+    }
+}
+
+.page-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 72px;
+
+    /* identical to box height, or 112% */
+    display: flex;
+    align-items: center;
+
+    /* Text/Black */
+    color: #000000;
 }

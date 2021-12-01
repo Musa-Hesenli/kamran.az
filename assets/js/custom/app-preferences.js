@@ -35,23 +35,21 @@ $(document).ready(function () {
     <span>CLOSE MENU</span>
     `
 
-
-
+    if($(window).width() > 992)
+    leftContent.css("max-width", leftContent.width() + "px")
     closeMenu.click(function () {
-
         mainRightSide.fadeToggle(300);
         if (!mainRightSide.hasClass('show')) {
             mainLeftSide.animate({ marginRight: '350px' }, 300);
-            leftContent.animate({ marginRight: 'auto' }, 300);
-            leftContent.animate({ marginLeft : "auto" }, 300);
-                        mainRightSide.addClass('show');
+            leftContent.addClass('ml-auto');
+            leftContent.addClass('mr-auto')
+            mainRightSide.addClass('show');
             // change text and icon
             $(closeMenu).html(closeMenuHtml);
         } else {
-
             mainLeftSide.animate({ marginRight: '0px' }, 300);
-            leftContent.animate({ marginRight: 'auto' }, 300);
-            leftContent.animate({ marginLeft : 'auto' }, 300);
+            leftContent.addClass('ml-auto');
+            leftContent.addClass('mr-auto');
             mainRightSide.removeClass('show');
             $(closeMenu).html(openMenuHtml);
         }

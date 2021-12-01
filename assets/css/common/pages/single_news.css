@@ -1,46 +1,67 @@
 .left__content__back__button {
   color: #888888;
-  text-decoration: none;
-}
-
-.left__content__back__button i {
-  margin-right: 5px;
-}
-
-.left__content__back__button:hover {
-  color: #888888;
-}
+  text-decoration: none; }
+  .left__content__back__button i {
+    margin-right: 5px; }
+  .left__content__back__button:hover {
+    color: #000; }
 
 .content__main__image {
   width: 100%;
   margin: 20px 0px;
-  height: auto;
-}
+  height: 676px;
+  object-fit: cover; }
 
 .content__entries {
   margin-bottom: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
+  align-items: center;
+  justify-content: space-between; }
 
 .content__entries__share__buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
+  align-items: center; }
+  .content__entries__share__buttons .share__button {
+    margin: 0px 10px;
+    cursor: pointer; }
+    .content__entries__share__buttons .share__button svg {
+      width: 17px;
+      height: 17px; }
+    .content__entries__share__buttons .share__button svg path {
+      fill: #888888; }
+    .content__entries__share__buttons .share__button:hover svg path {
+      fill: #000; }
 
-.content__entries__share__buttons .share__button {
-  margin: 0px 10px;
-  cursor: pointer;
-}
+.single__news__content__fullscreen__image {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  .single__news__content__fullscreen__image img {
+    width: 100%; }
+
+.single__news__nav__item {
+  display: flex;
+  align-items: center;
+  margin-top: 40px; }
+  .single__news__nav__item .nav-image {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100%;
+    height: 94px; }
+  .single__news__nav__item .single__news__item__text {
+    margin: 0px;
+    margin-top: 12px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    display: flex;
+    align-items: center;
+    /* Text/Black */
+    color: #000000; }
+
+@media only screen and (max-width: 992px) {
+  .single__news__nav__item .nav-image {
+    margin-left: 0px; } }
+
 /*# sourceMappingURL=single_news.css.map */

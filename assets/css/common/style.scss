@@ -169,7 +169,24 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 }
 
 .left-side-content {
-    padding-bottom: 176px !;
+    padding-bottom: 176px !important;
+}
+
+
+.left__content__back__button-img {
+    margin-right: 15px;
+}
+
+.stecky-container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media only screen and (max-width : 992px) {
+    .stecky-container {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 }
 
 .main-right-side {
@@ -254,6 +271,10 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
         left: 0;
         height: 100%;
     }
+}
+
+.text-bold {
+    font-weight: 700;
 }
 
 .skills-right-sidebar {
@@ -610,7 +631,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
         }
 
         .date-text {
-            margin-bottom: -3px;
+            // margin-bottom: -3px;
         }
     }
 
@@ -717,8 +738,12 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
         margin-right: 7px
     }
 
+    img {
+        margin-right: 7px;
+    }
+
     .date-text {
-        margin-bottom: -3px;
+        // margin-bottom: -3px;
     }
 }
 
@@ -978,11 +1003,21 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 
 .single__news {
     .single__news__title {
-        margin: 15px 0px;
+        margin: 32px 0px;
         h4 {
             font-family: 'Gilroy';
-            font-size: 24px;
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 38px;
+            /* or 127% */
+
+            display: flex;
+            align-items: center;
+
+            /* Text/Black */
+
+            color: #000000;
+
         }
     }
 
@@ -1009,7 +1044,6 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
             font-size: 16px;
             font-family: 'Gilroy';
             line-height: 24px;
-            font-weight: 500;
         }
     }
     .single__news__content__gallery {
@@ -1037,6 +1071,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
         font-family: 'Gilroy';
         color: #fff;
         font-weight: 500;
+        margin-bottom: 3px;
         text-decoration: none;
     }
 }
@@ -1133,6 +1168,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
         font-size: 15px;
         font-family: 'Gilroy';
         font-weight: 500;
+        padding-block: 5px;
         span {
             font-size: 15px;
             font-family: 'Gilroy';
@@ -1407,6 +1443,15 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 
 .category__content {
     display: none;
+    &-in {
+        max-width: 60%;
+    }
+    
+    &-image {
+        width: 255px;
+        margin-bottom: 48px;
+        display: block;
+    }
 }
 
 .hoverable__dynamic__content {
@@ -1454,7 +1499,18 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
     /* identical to box height, or 112% */
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 
     /* Text/Black */
     color: #000000;
 }
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.mr-auto {
+    margin-right: auto;
+}
+
+@import "preferences.scss"

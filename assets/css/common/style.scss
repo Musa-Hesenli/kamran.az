@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'Gilroy';
-    src: url('../../fonts/Gilroy-Medium.ttf');
+    src: url('../../fonts/Gilroy-SemiBold.ttf');
     font-weight: 600;
 }
 
@@ -1193,6 +1193,12 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 
 .segment__header__title {
     color: #000;
+    font-weight: 600;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
 }
 
 .work__specifications__accordion {
@@ -1216,7 +1222,7 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 
 .work__accordion__body {
     display: none;
-    padding: 0px 15px;
+    padding: 34px 32px;
 }
 
 // About page
@@ -1252,6 +1258,24 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
     .segment__footer__rating {
         margin: 0px 10px 0px 0px;
     }
+}
+
+.work__accordion__item {
+    i {
+        transition: .4s;
+        font-size: 18px;
+        &.colorfull {
+            background: -webkit-linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%), -webkit-linear-gradient(241.93deg, #FFE380 9.25%, rgba(255, 197, 0, 0) 51.39%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &.rotated {
+            transform: rotate(-180deg);
+        }
+    }
+
 }
 
 .segment__tag {

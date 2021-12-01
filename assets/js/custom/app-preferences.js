@@ -161,14 +161,25 @@ $(document).ready(function () {
         if (sibling.hasClass('active__accordion')) {
             sibling.removeClass('active__accordion');
             $(this).find('h2').removeClass('gradient-text');
+            
+            $(this).find("i.fa-arrow-down").removeClass('rotated');
+
+            
+            $(this).find("i.fa-arrow-down").removeClass('colorfull');
+
             work__accordion__bodies.slideUp();
             return;
         }
         work__accordion__header.find('h2').removeClass('gradient-text');
+        work__accordion__header.find("i.fa-arrow-down").removeClass('rotated');
+        work__accordion__header.find("i.fa-arrow-down").removeClass('colorfull');
         work__accordion__bodies.removeClass('active__accordion');
+
         work__accordion__bodies.slideUp();
         sibling.addClass('active__accordion');
-
+        
+        $(this).find("i.fa-arrow-down").addClass('rotated');
+        $(this).find("i.fa-arrow-down").addClass('colorfull');
         $(this).find('h2').addClass('gradient-text');
         sibling.slideToggle()
     })

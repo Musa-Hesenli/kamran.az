@@ -2,4 +2,12 @@
     .fs-#{$i} {
         font-size: #{$i}px !important;
     }
+
+    .mb-#{$i} {
+        margin-bottom: #{$i}px !important;
+    }
+
+    .width-#{$i} {
+        width : round(percentage($i/100)) !important;
+    }
 }

@@ -7,6 +7,11 @@
         margin-bottom: #{$i}px !important;
     }
 
+    .mt-#{$i} {
+        margin-top: #{$i}px !important;
+    }
+
+
     .width-#{$i} {
         width : round(percentage($i/100)) !important;
     }

@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$gray-tab-switcher".
-        on line 132 of C:\Users\musah\OneDrive\Desktop\Amigos\kamran.az\assets\css\common\responsive\responsive.scss
+        on line 218 of C:\Users\musah\OneDrive\Desktop\Amigos\kamran.az\assets\css\common\responsive\responsive.scss
 
-127:         }
-128: 
-129:         .main-right-side {
-130:             width: 350px;
-131:             top: 0;
-132:             border-left: 1px solid $gray-tab-switcher;
-133:             background-color: transparent;
-134:             right: 0;
-135:             position: fixed;
-136:             height: 100%;
-137:             direction: rtl;
+213:         }
+214: 
+215:         .main-right-side {
+216:             width: 350px;
+217:             top: 0;
+218:             border-left: 1px solid $gray-tab-switcher;
+219:             background-color: transparent;
+220:             right: 0;
+221:             position: fixed;
+222:             height: 100%;
+223:             direction: rtl;
 
 Backtrace:
-C:\Users\musah\OneDrive\Desktop\Amigos\kamran.az\assets\css\common\responsive\responsive.scss:132
+C:\Users\musah\OneDrive\Desktop\Amigos\kamran.az\assets\css\common\responsive\responsive.scss:218
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
@@ -91,4 +91,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$gray-tab-switcher\".\A         on line 132 of C:\Users\musah\OneDrive\Desktop\Amigos\kamran.az\assets\css\common\responsive\responsive.scss\A \A 127:         }\A 128: \A 129:         .main-right-side {\A 130:             width: 350px;\A 131:             top: 0;\A 132:             border-left: 1px solid $gray-tab-switcher;\A 133:             background-color: transparent;\A 134:             right: 0;\A 135:             position: fixed;\A 136:             height: 100%;\A 137:             direction: rtl;"; }
+  content: "Error: Undefined variable: \"$gray-tab-switcher\".\A         on line 218 of C:\Users\musah\OneDrive\Desktop\Amigos\kamran.az\assets\css\common\responsive\responsive.scss\A \A 213:         }\A 214: \A 215:         .main-right-side {\A 216:             width: 350px;\A 217:             top: 0;\A 218:             border-left: 1px solid $gray-tab-switcher;\A 219:             background-color: transparent;\A 220:             right: 0;\A 221:             position: fixed;\A 222:             height: 100%;\A 223:             direction: rtl;"; }

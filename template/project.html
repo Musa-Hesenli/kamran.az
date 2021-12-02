@@ -22,9 +22,20 @@
         <div class="header sticky sticky-top">
           <div class="header-left">
             <div class="header-logo">KAMRAN.AZ</div>
-            <div class="header-theme-switcher">
-              <button class="light-mode-button">light mode</button>
-              <button class="dark-mode-button">dark mode</button>
+            <div
+              class="
+                header-theme-switcher
+                d-lg-flex d-none
+                align-items-center
+                justify-content-between
+              "
+            >
+              <div class="theme-wrapper active">
+                <button class="light-mode-button">light mode</button>
+              </div>
+              <div class="theme-wrapper">
+                <button class="dark-mode-button">dark mode</button>
+              </div>
             </div>
           </div>
           <div class="header-right">
@@ -104,10 +115,20 @@
                         </a>
                 </div>
                 <div class="intro">
-                    <h2 class="semi-bold-text iDesignerntro-title">My Connections</h2>
-                    <p class="medium-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, distinctio officia nobis minus architecto reprehenderit ipsa facere laboriosam, quaerat dolor autem et, iste a maxime voluptatibus! Iure labore eaque sit!
+                    <h1 class="page-title">My Connections</h2>
+                    <p class="fs-16">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, distinctio officia nobis minus architecto reprehenderit ipsa facere laboriosam, quaerat dolor autem et, iste a maxime voluptatibus! Iure labore eaque sit!
                     Quasi, fuga perferendis? Hic incidunt ipsam eveniet laborum voluptas. Cumque odio accusantium esse sunt laudantium laborum nostrum nam repellendus, ea sed, unde vitae amet vel tempora perferendis asperiores nihil doloribus!
                     Accusamus beatae nisi earum molestiae magni, tempore rem esse accusantium. Possimus eveniet beatae error tenetur, quo nostrum in, molestiae dolorem doloribus voluptates ex, dolore id quisquam aut harum cupiditate eligendi?</p>
+
+                    <p class="fs-16 page-text mt-40">
+                      <a href="">Bu JPEG resim 69.3</a> milyon dolara satıldı! Evet, yanlış duymadınız. Bir kişi 2000 araba ya da 200 ev ya da 20 ada alabileceği bir fiyatı bu dijital resim dosyasını satın almak için harcadı. Peki neden? Bu kişi ya çok çılgın ya da hepimizden daha akıllı!
+
+                      Acaba bu resimde bizim ilk bakışta göremediğimiz gizli bir özellik mi var? Birlikte inceleyelim. Resmin altındaki “super zoom” özelliğini kullanarak ayrıntıları görmeye çalışalım. Bu 21069 x 21069 piksel ölçülerindeki büyük resim başka küçük resimlerden oluşuyor. İçinde bir sürü çizim, eskiz, illüstrasyon var. Bazıları güzel, bazıları sıradan gibi gözüküyor. Aralarda popüler kültüre yapılmış göndermeler göze çarpıyor: Pikachu, Michael Jackson, bol bol Yoda ve Star Wars…
+
+                      Yine de sizce küçük küçük resimlerden oluşturulmuş bu kolaj bu kadar değerli olabilir mi? Bir de yapana bakalım. Eser sahibi olarak “Beeple” adında 1981 doğumlu bir kişiyi görüyoruz. Asıl adı Mike Winkelmann olan bir grafik tasarımcı bu kişi… 1 Mayıs 2007’de bir karar vermiş. Bugünden sonra her gün bir resim çizip online olarak yayınlayacağım. Bir “zinciri kırma” hedefi koymuş kendine anlayacağınız… ve kırmamış da. 2007’den 2020’ye kadar 13,5 yıl boyunca her gün bir resim çizmiş. Bunlardan seçerek oluşturduğu kolajın adı o yüzden “ilk 5000 gün” anlamına geliyor. 
+
+                      Enteresan bir hikaye. Ama yine de böylesine büyük bir değerlemeye nasıl ulaştığını açıklamak için yeterli değil. Çünkü bu görsellerin her birine hemen şu anda internet üzerinden siz de ulaşabilirsiniz. Kendi web sitesinde parça parça yayınlanmaya devam ediyor. Bunları indirip renkli baskısını alıp duvarınıza yapıştırabilirsiniz. Ya da böyle tek tek uğraşmak istemiyorsanız yılın sonuna doğru çıkacak kitabını alabilirsiniz. 
+                    </p>
                 </div>
 
                 
@@ -134,27 +155,75 @@
             <div class="filters">
               <h4>Filters</h4>
               <div class="filter-item">
-                <div class="icon-wrapper">
-                  <img src="../images/icons/rank.svg" alt="" />
-                </div>
-                <div class="filter-text">
-                  <span>By Ranking</span>
+                <a
+                  href="#"
+                  aria-label="Filter link"
+                  class="d-flex filter-link align-items-center"
+                >
+                  <div class="icon-wrapper">
+                    <img src="../images/icons/rank.svg" alt="" />
+                  </div>
+                  <div class="filter-text">
+                    <span>By Ranking</span>
+                  </div>
+                </a>
+                <div class="filter-hidden" aria-hidden="true">
+                  <div class="filter-hidden__item active" tabindex="0">
+                    all rankings
+                  </div>
+                  <div class="filter-hidden__item" tabindex="0">6+</div>
+                  <div class="filter-hidden__item" tabindex="0">8+</div>
+                  <div class="filter-hidden__item" tabindex="0">only 10</div>
                 </div>
               </div>
               <div class="filter-item">
-                <div class="icon-wrapper">
-                  <img src="../images/icons/date.svg" alt="" />
-                </div>
-                <div class="filter-text">
-                  <span>By Date</span>
+                <a
+                  href="#"
+                  aria-label="Filter link"
+                  class="d-flex filter-link align-items-center"
+                >
+                  <div class="icon-wrapper">
+                    <img src="../images/icons/date.svg" alt="" />
+                  </div>
+                  <div class="filter-text">
+                    <span>By Date</span>
+                  </div>
+                </a>
+                <div class="filter-hidden" aria-hidden="true">
+                  <div class="filter-hidden__item active" tabindex="0">
+                    all the time
+                  </div>
+                  <div class="filter-hidden__item" tabindex="0">
+                    last week
+                  </div>
+                  <div class="filter-hidden__item" tabindex="0">
+                    last 3 weeks
+                  </div>
+                  <div class="filter-hidden__item" tabindex="0">
+                    last month
+                  </div>
                 </div>
               </div>
               <div class="filter-item">
-                <div class="icon-wrapper">
-                  <img src="../images/icons/lang.svg" alt="" />
-                </div>
-                <div class="filter-text">
-                  <span>By Content Language</span>
+                <a
+                  href="#"
+                  aria-label="Filter link"
+                  class="d-flex filter-link align-items-center"
+                >
+                  <div class="icon-wrapper">
+                    <img src="../images/icons/lang.svg" alt="" />
+                  </div>
+                  <div class="filter-text">
+                    <span>By Content Language</span>
+                  </div>
+                </a>
+                <div class="filter-hidden" aria-hidden="true">
+                  <div class="filter-hidden__item active" tabindex="0">
+                    all language
+                  </div>
+                  <div class="filter-hidden__item" tabindex="0">AZ only</div>
+                  <div class="filter-hidden__item" tabindex="0">RU only</div>
+                  <div class="filter-hidden__item" tabindex="0">EN only</div>
                 </div>
               </div>
             </div>
@@ -163,33 +232,160 @@
               <div class="category-tabs">
                 <div class="category-tab">
                   <h6 class="category-text">Timeline</h6>
+                  <div class="category__content">
+                    <div class="category__content-in">
+                      <img
+                        src="../images/backgrounds/category-content-img.png"
+                        class="category__content-image"
+                        alt="Category content image"
+                      />
+                      <h1 class="text-bold">
+                        I’m the best moovie maker in country. You have to look
+                        throught
+                        <span class="gradient-text"> my collection</span>.
+                      </h1>
+                    </div>
+                  </div>
                 </div>
                 <div class="category-tab">
                   <h6 class="category-text">Movies</h6>
+                  <div class="category__content">
+                    <div class="category__content-in">
+                      <img
+                        src="../images/backgrounds/category-content-img.png"
+                        class="category__content-image"
+                        alt="Category content image"
+                      />
+                      <h1 class="text-bold">
+                        I’m the best moovie maker in country. You have to look
+                        throught
+                        <span class="gradient-text"> my collection</span>.
+                      </h1>
+                    </div>
+                  </div>
                 </div>
                 <div class="category-tab">
                   <h6 class="category-text">Articles</h6>
+                  <div class="category__content">My articles</div>
                 </div>
                 <div class="category-tab">
                   <h6 class="category-text">Youtube</h6>
+                  <div class="category__content">
+                    <div class="category__content-in">
+                      <img
+                        src="../images/backgrounds/category-content-img.png"
+                        class="category__content-image"
+                        alt="Category content image"
+                      />
+                      <h1 class="text-bold">
+                        I’m the best moovie maker in country. You have to look
+                        throught
+                        <span class="gradient-text"> my collection</span>.
+                      </h1>
+                    </div>
+                  </div>
                 </div>
                 <div class="category-tab">
                   <h6 class="category-text">Books</h6>
+                  <div class="category__content">
+                    <div class="category__content-in">
+                      <img
+                        src="../images/backgrounds/category-content-img.png"
+                        class="category__content-image"
+                        alt="Category content image"
+                      />
+                      <h1 class="text-bold">
+                        I’m the best moovie maker in country. You have to look
+                        throught
+                        <span class="gradient-text"> my collection</span>.
+                      </h1>
+                    </div>
+                  </div>
                 </div>
                 <div class="category-tab">
                   <h6 class="category-text">Aphorisms</h6>
+                  <div class="category__content">
+                    <div class="category__content-in">
+                      <img
+                        src="../images/backgrounds/category-content-img.png"
+                        class="category__content-image"
+                        alt="Category content image"
+                      />
+                      <h1 class="text-bold">
+                        I’m the best moovie maker in country. You have to look
+                        throught
+                        <span class="gradient-text"> my collection</span>.
+                      </h1>
+                    </div>
+                  </div>
                 </div>
                 <div class="category-tab">
                   <h6 class="category-text">Stories</h6>
+                  <div class="category__content">
+                    <div class="category__content-in">
+                      <img
+                        src="../images/backgrounds/category-content-img.png"
+                        class="category__content-image"
+                        alt="Category content image"
+                      />
+                      <h1 class="text-bold">
+                        I’m the best moovie maker in country. You have to look
+                        throught
+                        <span class="gradient-text"> my collection</span>.
+                      </h1>
+                    </div>
+                  </div>
                 </div>
                 <div class="category-tab">
                   <h6 class="category-text">Words</h6>
+                  <div class="category__content">
+                    <div class="category__content-in">
+                      <img
+                        src="../images/backgrounds/category-content-img.png"
+                        class="category__content-image"
+                        alt="Category content image"
+                      />
+                      <h1 class="text-bold">
+                        I’m the best moovie maker in country. You have to look
+                        throught
+                        <span class="gradient-text"> my collection</span>.
+                      </h1>
+                    </div>
+                  </div>
                 </div>
                 <div class="category-tab">
                   <h6 class="category-text">Humor</h6>
+                  <div class="category__content">
+                    <div class="category__content-in">
+                      <img
+                        src="../images/backgrounds/category-content-img.png"
+                        class="category__content-image"
+                        alt="Category content image"
+                      />
+                      <h1 class="text-bold">
+                        I’m the best moovie maker in country. You have to look
+                        throught
+                        <span class="gradient-text"> my collection</span>.
+                      </h1>
+                    </div>
+                  </div>
                 </div>
                 <div class="category-tab">
                   <h6 class="category-text">Places</h6>
+                  <div class="category__content">
+                    <div class="category__content-in">
+                      <img
+                        src="../images/backgrounds/category-content-img.png"
+                        class="category__content-image"
+                        alt="Category content image"
+                      />
+                      <h1 class="text-bold">
+                        I’m the best moovie maker in country. You have to look
+                        throught
+                        <span class="gradient-text"> my collection</span>.
+                      </h1>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -208,7 +404,6 @@
           </div>
         </div>
       </div>
-
       <!-- Right side menu end -->
 
       <div class="bottom-menu-opener">
@@ -658,6 +853,11 @@
       </div>
 
       <!-- Skills right side menu end -->
+
+      <div class="hoverable__content">
+        <div class="hoverable__dynamic__content">
+        </div>
+      </div>
     </div>
 
     <script src="../assets/js/plugins/jquery.min.js"></script>

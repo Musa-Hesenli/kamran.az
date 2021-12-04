@@ -207,7 +207,10 @@ $(document).ready(function () {
 
         const display = hover__able__content.css('display');
         category__tab.removeClass('active');
+        
+        category__tab.find('.category-text span').removeClass('gradient-text');
         $(this).addClass('active');
+        $(this).find('.category-text span').addClass('gradient-text');
         
         const content = $(this).find('.category__content').html();
         console.log(content);

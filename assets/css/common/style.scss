@@ -363,6 +363,21 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
     }
 }
 
+.load-more-work {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 65px;
+    .load-more-work-arrow {
+        margin-right: 15px;
+    }
+}
+
+
 .main-right-side {
     &::-webkit-scrollbar {
         display: none;
@@ -764,6 +779,10 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 
 .card-full-width {
     margin-bottom: 20px;
+
+    .custom-card-image {
+        object-fit: cover;
+    }
 
     &.card-with-cutter-image {
 
@@ -1356,7 +1375,14 @@ linear-gradient(133.07deg, #3549FF 14.94%, #FF8616 89.03%);
 .work__experience__timeline {
     .work__experience__item {
         display: flex;
-        margin-bottom: 40px;
+        &-seperator {
+            height: 50px;
+            margin-top: 10px;
+            margin-bottom: 26px;
+            width: 100%;
+            margin-left: 25px;
+            border-left: 2px dashed #CCCCCC;
+        }
     }
     .work__experience__date {
         &.now {

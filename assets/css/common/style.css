@@ -253,6 +253,18 @@
 .page-text a {
   color: #0075ff !important; }
 
+.load-more-work {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 65px; }
+  .load-more-work .load-more-work-arrow {
+    margin-right: 15px; }
+
 .main-right-side {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -514,6 +526,8 @@
 
 .card-full-width {
   margin-bottom: 20px; }
+  .card-full-width .custom-card-image {
+    object-fit: cover; }
   .card-full-width.card-with-cutter-image .card-img-top {
     height: 524px;
     position: relative;
@@ -1142,8 +1156,14 @@
   color: #3A3A3A; }
 
 .work__experience__timeline .work__experience__item {
-  display: flex;
-  margin-bottom: 40px; }
+  display: flex; }
+  .work__experience__timeline .work__experience__item-seperator {
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 26px;
+    width: 100%;
+    margin-left: 25px;
+    border-left: 2px dashed #CCCCCC; }
 .work__experience__timeline .work__experience__date {
   background-color: #F2F2F2;
   border-radius: 50%;

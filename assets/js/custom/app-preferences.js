@@ -289,6 +289,19 @@ $(document).ready(function () {
     menuLink.on('click', function() {
         const refer = $(this).parent().find('.filter-hidden');
         refer.slideToggle();
+    });
+
+    const filterHiddenItem = $(".filter-hidden__item");
+    filterHiddenItem.on('click', function() {
+        if($(this).hasClass('active')) {
+            $(this).parent().find('.filter-hidden__item').removeClass('active');
+        } else{
+            $(this).parent().find('.filter-hidden__item').removeClass('active');
+            $(this).addClass('active');
+        }
+        
+        $(".filter-selected-count").text($('.filter-hidden__item.active').length);
+        $(".filter-selected-count").removeClass('d-none');
     })
     // END: Filter menu
 

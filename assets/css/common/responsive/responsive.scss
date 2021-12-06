@@ -115,6 +115,7 @@
 
 .comment__item__text {
     padding-left: 0px;
+    margin-top: 20px;
 }
 
 //medium screens
@@ -163,11 +164,12 @@
     }
 
     .writer__work {
-        margin-bottom: 24px;
+        margin-bottom: 10px;
     }
 
     .comment__item__text {
         padding-left: 115px;
+        margin-top: 0px;
     }
 }
 
@@ -224,7 +226,6 @@
             display: block;
             .right-menu-contents {
                 width: 290px;
-                height: 100%;
                 position: absolute;
                 left: 0px;
                 top: 0px;
@@ -263,4 +264,5 @@
 
 .right-menu-contents {
     padding: 15px;
+    padding-left: 25px;
 }

@@ -1,14 +1,22 @@
 .dark {
   background-color: #212121;
-  color: #fff; }
-  .dark .header {
-    background-color: #212121;
-    color: #fff; }
-    .dark .header .header-right .close-menu-section {
-      color: #fff; }
-  .dark a {
-    color: #fff; }
-  .dark .card-event-date {
-    background-color: #000; }
+  color: #fff;
+}
 
+.dark .header {
+  background-color: #212121;
+  color: #fff;
+}
+
+.dark .header .header-right .close-menu-section {
+  color: #fff;
+}
+
+.dark a {
+  color: #fff;
+}
+
+.dark .card-event-date {
+  background-color: #000;
+}
 /*# sourceMappingURL=theme.css.map */

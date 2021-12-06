@@ -46,6 +46,7 @@
     margin-left: 20px;
     margin-right: 20px;
     width: 100%;
+    max-width: 130px;
     height: 94px; }
   .single__news__nav__item .single__news__item__text {
     margin: 0px;

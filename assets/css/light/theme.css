@@ -17,4 +17,9 @@
 .light a {
   color: var(--text-dark);
 }
+
+.light .pagination-wrap {
+  background-color: rgba(255, 255, 255, 0.96);
+  z-index: 1;
+}
 /*# sourceMappingURL=theme.css.map */

@@ -41,9 +41,30 @@
             </div>
           </div>
           <div class="header-right">
-            <div class="avatar">
-              <img src="../images/avatars/kamran-avatar.png" alt="" />
+            <div class="avatar-block d-inline-flex">
+              <div class="d-flex align-items-center avatar-block-in">
+                <div class="avatar-info">
+                  <div class="avatar-info-in">
+                    Meet me. You will  be surprised :)
+                  </div>
+                </div>
+              </div>
+              <a href="">
+                <div href="" class="avatar">
+                  <img src="../images/avatars/kamran-avatar.png" alt="" />
+                </div>
+              </a>
             </div>
+            <!-- <a href="" class="avatar-block">
+              <div class="avatar-info">
+                <div class="avatar-info-in">
+                  Meet me. You will  be surprised :)
+                </div>
+              </div>
+              <a href="" class="avatar">
+                <img src="../images/avatars/kamran-avatar.png" alt="" />
+              </a>
+            </a> -->
             <div class="close-menu-section">
               <svg
                 width="12"
@@ -118,7 +139,7 @@
             </div>
 
             <!-- Reusable pagination -->
-            <div class="col-12">
+            <div class="col-12 pagination-wrap sticky sticky-top" id="start_pagination" style="top: 100px;">
               <div class="pagination start-pagination">
                 <a href="?page=1" class="page-item active"> 01 </a>
                 <a href="?page=1" class="page-item"> 02 </a>
@@ -138,7 +159,7 @@
 
             <!-- Cards begin -->
 
-            <div class="container  p-0">
+            <div class="container  p-0" id="observer_content">
               <div class="row">
                 <!-- For each loop entry  begin-->
                 <div class="col-12 col-md-6 col-lg-6">
@@ -732,7 +753,7 @@
                 </div>
               </h4>
               <div class="filter-item">
-                <a href="#" aria-label="Filter link" class="d-flex filter-link align-items-center">
+                <a href="#" aria-label="Filter link" aria-haspopup="listbox" class="d-flex filter-link align-items-center">
                   <div class="icon-wrapper">
                     <img src="../images/icons/rank.svg" alt="" />
                   </div>
@@ -741,7 +762,7 @@
                   </div>
                 </a>
                 <div class="filter-hidden" aria-hidden="true">
-                  <div class="filter-hidden__item active" tabindex="0">all rankings</div>
+                  <div class="filter-hidden__item active all" tabindex="0">all rankings</div>
                   <div class="filter-hidden__item" tabindex="0">6+</div>
                   <div class="filter-hidden__item" tabindex="0">8+</div>
                   <div class="filter-hidden__item" tabindex="0">only 10</div>
@@ -757,7 +778,7 @@
                   </div>
                 </a>
                 <div class="filter-hidden" aria-hidden="true">
-                  <div class="filter-hidden__item active" tabindex="0">all the time</div>
+                  <div class="filter-hidden__item active all" tabindex="0">all the time</div>
                   <div class="filter-hidden__item" tabindex="0">last week</div>
                   <div class="filter-hidden__item" tabindex="0">last 3 weeks</div>
                   <div class="filter-hidden__item" tabindex="0">last month</div>
@@ -773,7 +794,7 @@
                   </div>
                 </a>
                 <div class="filter-hidden" aria-hidden="true">
-                  <div class="filter-hidden__item active" tabindex="0">all language</div>
+                  <div class="filter-hidden__item active all" tabindex="0">all language</div>
                   <div class="filter-hidden__item" tabindex="0">AZ only</div>
                   <div class="filter-hidden__item" tabindex="0">RU only</div>
                   <div class="filter-hidden__item" tabindex="0">EN only</div>
@@ -952,54 +973,113 @@
           <div class="skill-left-side"></div>
           <div class="skills-right-sidebar">
             <div class="skill-item" style="width: 90%">
-              <span>#Python</span>
+              <div>
+                <span class="skill-item__title">#Python</span>
+              
+              </div>
+              <div class="d-block">
+                <span class="skill-item__description">60% - 30 articles</span>
+              </div>
             </div>
             <div class="skill-item" style="width: 60%">
-              <span>C++</span>
+              <div>
+                <span class="skill-item__title">#KINOMAN</span>
+              </div>
+              
+              <div class="d-block">
+                <span class="skill-item__description">60% • 305 articles </span>
+              </div>
             </div>
             <div class="skill-item" style="width: 70%">
-              <span>Visual Basic</span>
+              <div>
+                <span class="skill-item__title">#HUMOR</span>
+              </div>
+              
+              <div class="d-block">
+                <span class="skill-item__description">60% • 305 articles </span>
+              </div>
             </div>
             <div class="skill-item" style="width: 90%">
-              <span>Linux</span>
+              <div>
+                <span class="skill-item__title">#HUMOR</span>
+              </div>
+              
+              <div class="d-block">
+                <span class="skill-item__description">60% • 305 articles </span>
+              </div>
             </div>
             <div class="skill-item" style="min-width: 10%">
-              <span>#Python</span>
+              <div>
+                <span class="skill-item__title">#HUMOR</span>
+              </div>
+              
+              <div class="d-block">
+                <span class="skill-item__description">60% • 305 articles </span>
+              </div>
             </div>
             <div class="skill-item" style="width: 60%">
-              <span>C++</span>
+              <div>
+                <span class="skill-item__title">#HUMOR</span>
+              </div>
+              
+              <div class="d-block">
+                <span class="skill-item__description">60% • 305 articles </span>
+              </div>
             </div>
             <div class="skill-item active-skill" style="width: 70%">
-              <span>Visual Basic</span>
+              <div>
+                <span class="skill-item__title">#HUMOR</span>
+              </div>
+              
+              <div class="d-block">
+                <span class="skill-item__description">60% • 305 articles </span>
+              </div>
             </div>
             <div class="skill-item" style="width: 90%">
-              <span>Linux</span>
+              <div>
+                <span class="skill-item__title">#HUMOR</span>
+              </div>
+              
+              <div class="d-block">
+                <span class="skill-item__description">60% • 305 articles </span>
+              </div>
             </div>
             <div class="skill-item" style="width: 60%">
-              <span>C++</span>
+              <div>
+                <span class="skill-item__title">#HUMOR</span>
+              </div>
+              
+              <div class="d-block">
+                <span class="skill-item__description">60% • 305 articles </span>
+              </div>
             </div>
             <div class="skill-item" style="width: 70%">
-              <span>Visual Basic</span>
-            </div>
-            <div class="skill-item" style="width: 90%">
-              <span>Linux</span>
-            </div>
-            <div class="skill-item skill-menu-closer" style="min-width: 20%">
-              <div class="skill-closer-desc">Meaning of this cart</div>
-              <div class="skill-menu-closer-box">
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="#fff"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5.99999 4.82167L10.125 0.696669L11.3033 1.875L7.17832 6L11.3033 10.125L10.125 11.3033L5.99999 7.17833L1.87499 11.3033L0.696655 10.125L4.82166 6L0.696655 1.875L1.87499 0.696669L5.99999 4.82167Z"
-                    fill="#fff"
-                  />
-                </svg>
+              <div>
+                <span class="skill-item__title">#HUMOR</span>
               </div>
+              
+              <div class="d-block">
+                <span class="skill-item__description">60% • 305 articles </span>
+              </div>
+            </div>
+            <div class="skill-item skill-menu-closer-wrap" style="min-width: 20%">
+                <div class="skill-menu-closer">
+                  <div class="skill-closer-desc">Meaning of this cart</div>
+                  <div class="skill-menu-closer-box">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="#fff"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.99999 4.82167L10.125 0.696669L11.3033 1.875L7.17832 6L11.3033 10.125L10.125 11.3033L5.99999 7.17833L1.87499 11.3033L0.696655 10.125L4.82166 6L0.696655 1.875L1.87499 0.696669L5.99999 4.82167Z"
+                        fill="#fff"
+                      />
+                    </svg>
+                  </div>
+                </div>
             </div>
           </div>
         </div>

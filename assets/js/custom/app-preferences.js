@@ -85,7 +85,7 @@ $(document).ready(function () {
         console.log('click');
         $('body').addClass('hidden');
         skillMenuContainer.fadeIn();
-        skillsMenu.animate({ width: '300px' }, 300);
+        skillsMenu.animate({ width: '350px' }, 300);
         skillsMenu.addClass('open');
         bottomAccordion = skillMenuCloserBox.height();
         console.log(bottomAccordion)
@@ -137,6 +137,7 @@ $(document).ready(function () {
         for (let el of all__accordion__body__elements) {
             if ($(el).hasClass('active__accordion')) {
                 $(el).slideUp();
+            
             }
         }
         if (sibling.hasClass('active__accordion')) {
@@ -286,9 +287,15 @@ $(document).ready(function () {
 
     // BEGIN: Filter menu 
     const menuLink = $(".filter-item .filter-link");
+    const hiddenFilters = $('.filter-hidden');
     menuLink.on('click', function() {
         const refer = $(this).parent().find('.filter-hidden');
         refer.slideToggle();
+        refer.toggleClass('show');
+        if(!hiddenFilters.hasClass('show')) {
+            $(".filter-selected-count").text($('.filter-hidden__item.active:not(.all)').length);
+            $(".filter-selected-count").removeClass('d-none');
+        }
     });
 
     const filterHiddenItem = $(".filter-hidden__item");
@@ -300,11 +307,15 @@ $(document).ready(function () {
             $(this).addClass('active');
         }
         
-        $(".filter-selected-count").text($('.filter-hidden__item.active').length);
-        $(".filter-selected-count").removeClass('d-none');
+        $(".filter-selected-count").text($('.filter-hidden__item.active:not(.all)').length);
+        
     })
     // END: Filter menu
 
+    // Avatar hover effect
+
+    
+    
 });
 
 function changeSVGColors(color) {

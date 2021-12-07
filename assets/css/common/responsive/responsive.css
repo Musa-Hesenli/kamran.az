@@ -1,94 +1,169 @@
-/*
-Error: Undefined variable: "$gray-tab-switcher".
-        on line 220 of C:\Users\musah\OneDrive\Desktop\Amigos\kamran.az\assets\css\common\responsive\responsive.scss
+.main-wrapper {
+  width: 100%; }
+  .main-wrapper .row {
+    margin: 0px; }
+  .main-wrapper .main-left-side {
+    margin-right: 0px; }
+    .main-wrapper .main-left-side .left-features {
+      display: none; }
 
-215:         }
-216: 
-217:         .main-right-side {
-218:             width: 350px;
-219:             top: 0;
-220:             border-left: 1px solid $gray-tab-switcher;
-221:             background-color: transparent;
-222:             right: 0;
-223:             position: fixed;
-224:             height: 100%;
-225:             direction: rtl;
+.left-content {
+  margin-right: 0px; }
 
-Backtrace:
-C:\Users\musah\OneDrive\Desktop\Amigos\kamran.az\assets\css\common\responsive\responsive.scss:220
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `map'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `_perform'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:528:in `visit_media'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
-C:/Program Files (x86)/Koala/bin/sass:22:in `load'
-C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$gray-tab-switcher\".\A         on line 220 of C:\Users\musah\OneDrive\Desktop\Amigos\kamran.az\assets\css\common\responsive\responsive.scss\A \A 215:         }\A 216: \A 217:         .main-right-side {\A 218:             width: 350px;\A 219:             top: 0;\A 220:             border-left: 1px solid $gray-tab-switcher;\A 221:             background-color: transparent;\A 222:             right: 0;\A 223:             position: fixed;\A 224:             height: 100%;\A 225:             direction: rtl;"; }
+.right-menu-contents .header-theme-switcher {
+  background-color: #ebebeb; }
+
+.header {
+  padding-left: 20px;
+  padding-right: 20px; }
+  .header .header-left .header-theme-switcher {
+    display: none; }
+  .header .header-right .close-menu-small-screens {
+    display: flex;
+    margin-left: 15px; }
+  .header .header-right .close-menu-section {
+    display: none; }
+
+.main-left-side {
+  position: relative; }
+
+.main-right-side {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+  height: calc(100% - 100px); }
+
+.card-full-width .card-full-width-bottom-entries {
+  margin-top: 20px;
+  display: block; }
+.card-full-width .bottom-entries-left-side {
+  display: block; }
+.card-full-width.card-with-cutter-image .card-img-top {
+  position: relative; }
+  .card-full-width.card-with-cutter-image .card-img-top img {
+    width: 100%; }
+.card-full-width .custom-card-title {
+  left: 24px;
+  bottom: 24px; }
+
+.segment__footer .segment__footer__experience {
+  margin: 0px 10px 10px 0px; }
+
+.segment__tags {
+  margin-top: 15px; }
+
+.segment__tag {
+  margin-bottom: 5px;
+  margin-top: 5px; }
+
+.about__header .about__avatar .wrapper {
+  width: 160px;
+  height: 160px; }
+
+.comment__item__profile__photo {
+  width: 80px; }
+  .comment__item__profile__photo img {
+    width: 100%; }
+
+.writer__work {
+  margin-bottom: 0px; }
+
+.comment__item__text {
+  padding-left: 0px;
+  margin-top: 20px; }
+
+@media only screen and (min-width: 992px) {
+  .about__header__left {
+    display: flex; }
+
+  .segment__footer {
+    display: flex; }
+    .segment__footer .segment__footer__experience {
+      margin: 0px 10px 0px 0px; }
+
+  .segment__tag {
+    margin-top: 0px;
+    margin-bottom: 0px; }
+
+  .segment__tags {
+    margin-top: 0px; }
+
+  .about__header .about__avatar .wrapper {
+    width: 100%;
+    height: auto; }
+
+  .comment__item__profile__photo {
+    width: 100px; }
+    .comment__item__profile__photo img {
+      width: 100%; }
+
+  .writer__work {
+    margin-bottom: 10px; }
+
+  .comment__item__text {
+    padding-left: 115px;
+    margin-top: 0px; } }
+@media only screen and (min-width: 1200px) {
+  .main-left-side {
+    margin-right: 350px; }
+    .main-left-side .left-side-content {
+      padding: 10px 100px 10px 0px;
+      margin-left: 200px; }
+
+  .left-features {
+    display: flex !important; }
+
+  .header {
+    padding: 20px 60px; }
+    .header .header-left .header-theme-switcher {
+      display: inline-block; }
+    .header .header-right .close-menu-small-screens {
+      display: none; }
+    .header .header-right .close-menu-section {
+      display: flex; }
+
+  .main-wrapper .main-left-side {
+    flex: auto;
+    width: calc(100%, -350px);
+    margin-right: 350px; }
+  .main-wrapper .main-right-side {
+    width: 350px;
+    top: 0;
+    border-left: 1px solid #ebebeb;
+    background-color: transparent;
+    right: 0;
+    position: fixed;
+    height: 100%;
+    direction: rtl;
+    display: block; }
+    .main-wrapper .main-right-side .right-menu-contents {
+      width: 290px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      border-right: 1px solid #ebebeb; }
+
+  .card-full-width .card-full-width-bottom-entries {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+  .card-full-width .bottom-entries-left-side {
+    display: flex;
+    align-items: center;
+    flex-direction: row; }
+  .card-full-width.card-with-cutter-image .card-img-top {
+    position: relative; }
+    .card-full-width.card-with-cutter-image .card-img-top img {
+      width: auto; }
+  .card-full-width .custom-card-title {
+    left: 42px;
+    bottom: 42px; } }
+.right-menu-contents {
+  padding: 15px;
+  padding-left: 25px; }
+
+/*# sourceMappingURL=responsive.css.map */

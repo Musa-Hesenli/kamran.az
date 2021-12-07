@@ -217,7 +217,7 @@
         .main-right-side {
             width: 350px;
             top: 0;
-            border-left: 1px solid $gray-tab-switcher;
+            border-left: 1px solid #ebebeb;
             background-color: transparent;
             right: 0;
             position: fixed;
@@ -229,7 +229,7 @@
                 position: absolute;
                 left: 0px;
                 top: 0px;
-                border-right: 1px solid $gray-tab-switcher;
+                border-right: 1px solid #ebebeb;
             }
         }
     }

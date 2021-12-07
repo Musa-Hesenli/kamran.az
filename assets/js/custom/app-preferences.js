@@ -314,7 +314,13 @@ $(document).ready(function () {
 
     // Avatar hover effect
 
-    
+    // Avatar hover effect end
+
+    $('.card-statics').hover(function() {
+        $(this).parents('.custom-card').find('.card-rating-description').addClass('hovered');
+    }, function() {
+        $(this).parents('.custom-card').find('.card-rating-description').removeClass('hovered');
+    })
     
 });
 
